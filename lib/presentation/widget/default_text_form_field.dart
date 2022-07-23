@@ -27,7 +27,7 @@ class MyFormField extends StatelessWidget {
     required this.hintText,
     this.prefix,
     this.textAlign = TextAlign.start,
-    this.color = AppColor.lightGrey,
+    this.color = AppColor.grey,
     this.onTap ,
   }) : super(key: key);
 

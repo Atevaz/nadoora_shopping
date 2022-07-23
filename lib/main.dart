@@ -15,6 +15,7 @@ import 'package:intl/intl.dart';
 
 import 'business_logic/bloc_observer.dart';
 import 'business_logic/global_cubit/global_cubit.dart';
+import 'business_logic/global_cubit/global_state.dart';
 import 'data/local/cache_helper.dart';
 import 'data/remote/dio_helper.dart';
 
@@ -106,8 +107,9 @@ class _MyAppState extends State<MyApp> {
                         //supportedLocales: delegate.supportedLocales,
                         onGenerateRoute: widget.appRouter.onGenerateRoute,
                         theme: ThemeData(
-                          //fontFamily: 'cairo',
+                          fontFamily: 'Regular',
                           //scaffoldBackgroundColor: AppColors.white,
+
                           appBarTheme: const AppBarTheme(
                             elevation: 0.0,
                             color: AppColor.white,
