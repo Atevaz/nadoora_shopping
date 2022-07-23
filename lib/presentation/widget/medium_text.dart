@@ -8,6 +8,8 @@ class MediumText extends StatelessWidget {
   final double fontSize;
   final int maxLines;
   final TextOverflow overflow;
+  TextAlign? textAlign;
+
 
   MediumText({
     required this.text,
@@ -15,6 +17,8 @@ class MediumText extends StatelessWidget {
     this.fontSize = 20,
     this.maxLines = 3,
     this.overflow = TextOverflow.ellipsis,
+    this.textAlign,
+
 
   });
 
@@ -29,6 +33,8 @@ class MediumText extends StatelessWidget {
         overflow: overflow
       ),
       maxLines:maxLines ,
+      textAlign:textAlign ,
+
     );
   }
 }
