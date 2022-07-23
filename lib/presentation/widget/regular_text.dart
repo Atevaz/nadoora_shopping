@@ -9,6 +9,7 @@ class RegularText extends StatelessWidget {
    int? maxLines;
   TextAlign? textAlign;
   final TextOverflow overflow;
+  TextDecoration? decoration;
 
   RegularText({
     required this.text,
@@ -17,6 +18,7 @@ class RegularText extends StatelessWidget {
     this.maxLines ,
     this.overflow = TextOverflow.ellipsis,
     this.textAlign,
+    this.decoration,
 
   });
 
@@ -29,9 +31,11 @@ class RegularText extends StatelessWidget {
           fontFamily: 'Regular',
           fontSize: fontSize.sp,
           overflow: overflow,
+        decoration: decoration ,
       ),
       maxLines:maxLines ,
       textAlign:textAlign ,
+
     );
   }
 }
