@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../styles/colors.dart';
 import '../widget/headline_text.dart';
@@ -14,34 +15,36 @@ class MyAppBar extends StatelessWidget {
   const MyAppBar({
     Key? key,
     this.title = 'Kashkha',
-    this.leadingIcon = Icons.add_shopping_cart_outlined,
+    this.leadingIcon = Icons.menu,
     this.actionIcon= Icons.search,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: IconButton(
-        onPressed: () {},
-        icon: Icon(
-          leadingIcon,
-          color: AppColor.pink,
-        ),
+      // leading: IconButton(
+      //   onPressed: () {},
+      //   icon: Icon(
+      //     leadingIcon,
+      //     color: AppColor.blue,
+      //   ),
+      //   color: AppColor.blue,
+      // ),
+
+      iconTheme: IconThemeData(
+        color: AppColor.blue
       ),
-      title: HeadLineText(
-        text: title,
-        color: AppColor.black,
-      ),
+      title: Image.asset('assets/images/logo.png',height: 65.h,),
       actions: [
         IconButton(
           onPressed: () {},
           icon: Icon(
             actionIcon,
-            color: AppColor.pink,
+            color: AppColor.blue,
           ),
         )
       ],
-      centerTitle: true,
+      centerTitle: false,
     );
   }
 }
